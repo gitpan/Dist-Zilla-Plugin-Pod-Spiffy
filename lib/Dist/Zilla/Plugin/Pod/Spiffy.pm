@@ -3,7 +3,7 @@ package Dist::Zilla::Plugin::Pod::Spiffy;
 use strict;
 use warnings;
 
-our $VERSION = '1.001001'; # VERSION
+our $VERSION = '1.001002'; # VERSION
 
 use Moose;
 with qw/Dist::Zilla::Role::FileMunger/;
@@ -62,17 +62,19 @@ sub __process_authors {
     my $auth = Acme::CPANAuthors->new;
     for ( map uc, @authors ) {
         my $url = $auth->avatar_url($_) || '';
-        $out .= qq{<a href="http://metacpan.org/author/$_" style="text-align: center;">}
-                . qq{<img src="$url" alt="$_" style="display: block; padding-bottom: 5px;">$_</a>};
+        $out .= ' ' . qq{<a href="http://metacpan.org/author/$_" style="float: left; text-align: center;padding-right: 5px;">}
+                . qq{<img src="$url" alt="$_" style="display: block;padding-bottom: 5px;">$_</a>};
     }
 
-    return $out;
+    return $out . '<br style="clear: both;">';
 }
 
 sub __process_git {
     my ( $theme, $repo ) = @_;
 
-    return qq{<p style="background: url($theme/github.png) no-repeat left; padding-left: 120px; min-height: 61px; padding-top: 30px;">$repo</p>};
+    return qq{<p style="background: url($theme/github.png) no-repeat left;}
+        . qq{ padding-left: 120px; min-height: 61px; }
+        . qq{padding-top: 30px;">$repo</p>};
 }
 
 sub __mungings {
@@ -510,7 +512,7 @@ to C<bug-Dist-Zilla-Plugin-Pod-Spiffy at rt.cpan.org>
 
 (Ether is an unvolunteer test subject for this experiment :) )
 
-=for html  <a href="http://metacpan.org/author/ZOFFIX" style="text-align: center;"><img src="http://www.gravatar.com/avatar/328e658ab6b08dfb5c106266a4a5d065?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2F627d83ef9879f31bdabf448e666a32d5" alt="ZOFFIX" style="display: block; padding-bottom: 5px;">ZOFFIX</a><a href="http://metacpan.org/author/ETHER" style="text-align: center;"><img src="http://www.gravatar.com/avatar/bdc5cd06679e732e262f6c1b450a0237?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fbdc5cd06679e732e262f6c1b450a0237" alt="ETHER" style="display: block; padding-bottom: 5px;">ETHER</a>
+=for html   <a href="http://metacpan.org/author/ZOFFIX" style="float: left; text-align: center;padding-right: 5px;"><img src="http://www.gravatar.com/avatar/328e658ab6b08dfb5c106266a4a5d065?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2F627d83ef9879f31bdabf448e666a32d5" alt="ZOFFIX" style="display: block;padding-bottom: 5px;">ZOFFIX</a> <a href="http://metacpan.org/author/ETHER" style="float: left; text-align: center;padding-right: 5px;"><img src="http://www.gravatar.com/avatar/bdc5cd06679e732e262f6c1b450a0237?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fbdc5cd06679e732e262f6c1b450a0237" alt="ETHER" style="display: block;padding-bottom: 5px;">ETHER</a><br style="clear: both;">
 
 =for text Zoffix Znet <zoffix at cpan.org>
 

@@ -1,4 +1,7 @@
 Revision history for Dist-Zilla-Plugin-Pod-Spiffy
 
+1.001002 2014-02-08
+    - Fixed up AUTHOR section CSS
+
 1.001001 2014-02-07
     - First version released on an unsuspecting world
