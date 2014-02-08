@@ -20,7 +20,7 @@ name: Dist-Zilla-Plugin-Pod-Spiffy
 provides:
   Dist::Zilla::Plugin::Pod::Spiffy:
     file: lib/Dist/Zilla/Plugin/Pod/Spiffy.pm
-    version: 1.001004
+    version: 1.001006
 requires:
   Acme::CPANAuthors: 0
   Dist::Zilla::Role::FileMunger: 0
@@ -33,7 +33,7 @@ resources:
   bugtracker: https://github.com/zoffixznet/dist-zilla-plugin-pod-spiffy/issues
   homepage: http://metacpan.org/release/Dist-Zilla-Plugin-Pod-Spiffy
   repository: git://github.com/zoffixznet/dist-zilla-plugin-pod-spiffy.git
-version: 1.001004
+version: 1.001006
 x_Dist_Zilla:
   perl:
     version: 5.014002
@@ -265,7 +265,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::Pod::Spiffy
       name: Pod::Spiffy
-      version: 1.001004
+      version: 1.001005
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':InstallModules'

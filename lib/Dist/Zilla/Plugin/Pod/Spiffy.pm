@@ -3,7 +3,7 @@ package Dist::Zilla::Plugin::Pod::Spiffy;
 use strict;
 use warnings;
 
-our $VERSION = '1.001004'; # VERSION
+our $VERSION = '1.001006'; # VERSION
 
 use Moose;
 with qw/Dist::Zilla::Role::FileMunger/;
@@ -31,7 +31,7 @@ sub __munge_args {
     $in =~ s/\s+/ /g;
     my @ins = split /\s*\|\s*/, $in;
 
-    my $theme = 'http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-    Spiffy/icons';
+    my $theme = 'http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons';
     # my $theme = 'http://zcms';
     my $method_icons = __method_icons($theme);
     my $section_bits = __section_bits($theme);
@@ -189,7 +189,11 @@ In your POD:
 
     =head1 REPOSITORY
 
-    =for pod_spiffy github Fork this module on https://github.com/zoffixznet/Dist-Zilla-Plugin-Pod-Spiffy
+    =for pod_spiffy start github section
+
+    Fork this module on https://github.com/zoffixznet/Dist-Zilla-Plugin-Pod-Spiffy
+
+    =for pod_spiffy end github section
 
     ...
 
@@ -271,7 +275,7 @@ These icons provide hints on what your sub/method takes as an argument.
 
 =for html <span>Icon: </span>
 
-=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-    Spiffy/icons/in-no-args.png">
+=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/in-no-args.png">
 
 Use this icon to indicate your sub/method does not take any arguments.
 
@@ -281,7 +285,7 @@ Use this icon to indicate your sub/method does not take any arguments.
 
 =for html <span>Icon: </span>
 
-=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-    Spiffy/icons/in-scalar.png">
+=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/in-scalar.png">
 
 Use this icon to indicate your sub/method takes a plain
 scalar as an argument.
@@ -292,7 +296,7 @@ scalar as an argument.
 
 =for html <span>Icon: </span>
 
-=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-    Spiffy/icons/in-scalar-scalar-optional.png">
+=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/in-scalar-scalar-optional.png">
 
 Use this icon to indicate your sub/method takes as arguments one
 mandatory and one optional arguments, both of which are plain
@@ -304,7 +308,7 @@ scalars.
 
 =for html <span>Icon: </span>
 
-=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-    Spiffy/icons/in-arrayref.png">
+=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/in-arrayref.png">
 
 Use this icon to indicate your sub/method takes an arrayref as an argument.
 
@@ -314,7 +318,7 @@ Use this icon to indicate your sub/method takes an arrayref as an argument.
 
 =for html <span>Icon: </span>
 
-=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-    Spiffy/icons/in-hashref.png">
+=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/in-hashref.png">
 
 Use this icon to indicate your sub/method takes an hashref as an argument.
 
@@ -324,7 +328,7 @@ Use this icon to indicate your sub/method takes an hashref as an argument.
 
 =for html <span>Icon: </span>
 
-=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-    Spiffy/icons/in-key-value.png">
+=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/in-key-value.png">
 
 Use this icon to indicate your sub/method takes a list of
 key/value pairs as an argument
@@ -336,7 +340,7 @@ key/value pairs as an argument
 
 =for html <span>Icon: </span>
 
-=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-    Spiffy/icons/in-list.png">
+=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/in-list.png">
 
 Use this icon to indicate your sub/method takes a list
 of scalars as an argument (e.g. C<qw/foo bar baz ber/>)
@@ -347,7 +351,7 @@ of scalars as an argument (e.g. C<qw/foo bar baz ber/>)
 
 =for html <span>Icon: </span>
 
-=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-    Spiffy/icons/in-object.png">
+=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/in-object.png">
 
 Use this icon to indicate your sub/method takes an object as an argument.
 
@@ -357,7 +361,7 @@ Use this icon to indicate your sub/method takes an object as an argument.
 
 =for html <span>Icon: </span>
 
-=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-    Spiffy/icons/in-scalar-optional.png">
+=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/in-scalar-optional.png">
 
 Use this icon to indicate your sub/method takes a
 single B<optional> argument that is a scalar.
@@ -368,7 +372,7 @@ single B<optional> argument that is a scalar.
 
 =for html <span>Icon: </span>
 
-=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-    Spiffy/icons/in-scalar-or-arrayref.png">
+=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/in-scalar-or-arrayref.png">
 
 Use this icon to indicate your sub/method takes either
 a plain scalar or an arrayref as an argument.
@@ -379,7 +383,7 @@ a plain scalar or an arrayref as an argument.
 
 =for html <span>Icon: </span>
 
-=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-    Spiffy/icons/in-subref.png">
+=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/in-subref.png">
 
 Use this icon to indicate your sub/method takes a subref as an argument.
 
@@ -394,7 +398,7 @@ error occurs during its execution.
 
 =for html <span>Icon: </span>
 
-=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-    Spiffy/icons/out-error-exception.png">
+=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/out-error-exception.png">
 
 Use this icon to indicate your sub/method on error throws an exception.
 
@@ -415,7 +419,7 @@ either C<undef> or an empty list, depending on the context.
 
 =for html <span>Icon: </span>
 
-=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-    Spiffy/icons/out-error-undef.png">
+=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/out-error-undef.png">
 
 Use this icon to indicate your sub/method on error returns
 C<undef> (regardless of the context).
@@ -431,7 +435,7 @@ a successful     execution.
 
 =for html <span>Icon: </span>
 
-=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-    Spiffy/icons/out-scalar.png">
+=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/out-scalar.png">
 
 Use this icon to indicate your sub/method returns a plain scalar.
 
@@ -441,7 +445,7 @@ Use this icon to indicate your sub/method returns a plain scalar.
 
 =for html <span>Icon: </span>
 
-=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-    Spiffy/icons/out-arrayref.png">
+=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/out-arrayref.png">
 
 Use this icon to indicate your sub/method returns an arrayref.
 
@@ -451,7 +455,7 @@ Use this icon to indicate your sub/method returns an arrayref.
 
 =for html <span>Icon: </span>
 
-=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-    Spiffy/icons/out-hashref.png">
+=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/out-hashref.png">
 
 Use this icon to indicate your sub/method returns a hashref.
 
@@ -461,7 +465,7 @@ Use this icon to indicate your sub/method returns a hashref.
 
 =for html <span>Icon: </span>
 
-=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-    Spiffy/icons/out-key-value.png">
+=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/out-key-value.png">
 
 Use this icon to indicate your sub/method returns a list of
 key value pairs (i.e., return is suitable to assign to a hash).
@@ -472,7 +476,7 @@ key value pairs (i.e., return is suitable to assign to a hash).
 
 =for html <span>Icon: </span>
 
-=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-    Spiffy/icons/out-list.png">
+=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/out-list.png">
 
 Use this icon to indicate your sub/method returns a list of
 things (i.e., return is suitable to assign to an array).
@@ -483,7 +487,7 @@ things (i.e., return is suitable to assign to an array).
 
 =for html <span>Icon: </span>
 
-=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-    Spiffy/icons/out-list-or-arrayref.png">
+=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/out-list-or-arrayref.png">
 
 Use this icon to indicate your sub/method returns either a list of
 things or an arrayref, depending on the context.
@@ -494,7 +498,7 @@ things or an arrayref, depending on the context.
 
 =for html <span>Icon: </span>
 
-=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-    Spiffy/icons/out-subref.png">
+=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/out-subref.png">
 
 Use this icon to indicate your sub/method returns a subref.
 
@@ -504,7 +508,7 @@ Use this icon to indicate your sub/method returns a subref.
 
 =for html <span>Icon: </span>
 
-=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-    Spiffy/icons/out-object.png">
+=for html  <img alt="" src="http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/out-object.png">
 
 Use this icon to indicate your sub/method returns a object.
 
@@ -532,7 +536,7 @@ Available icons are:
 
     =for pod_spiffy end github section
 
-=for html   <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-    Spiffy/icons/section-github.png) no-repeat left; padding-left: 120px;" > <div style="display: table-cell; vertical-align: middle;"> 
+=for html   <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/section-github.png) no-repeat left; padding-left: 120px;" > <div style="display: table-cell; vertical-align: middle;"> 
 
 =for html <p>This is an example</p>
 
@@ -546,7 +550,7 @@ Available icons are:
 
     =for pod_spiffy end author section
 
-=for html   <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-    Spiffy/icons/section-author.png) no-repeat left; padding-left: 120px;" > <div style="display: table-cell; vertical-align: middle;"> 
+=for html   <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/section-author.png) no-repeat left; padding-left: 120px;" > <div style="display: table-cell; vertical-align: middle;"> 
 
 =for html <p>This is an example</p>
 
@@ -563,7 +567,7 @@ author avatars.
 
     =for pod_spiffy end contributors section
 
-=for html   <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-    Spiffy/icons/section-contributors.png) no-repeat left; padding-left: 120px;" > <div style="display: table-cell; vertical-align: middle;"> 
+=for html   <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/section-contributors.png) no-repeat left; padding-left: 120px;" > <div style="display: table-cell; vertical-align: middle;"> 
 
 =for html <p>This is an example</p>
 
@@ -581,7 +585,7 @@ author avatars.
 
     =for pod_spiffy end bugs section
 
-=for html   <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-    Spiffy/icons/section-bugs.png) no-repeat left; padding-left: 120px;" > <div style="display: table-cell; vertical-align: middle;"> 
+=for html   <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/section-bugs.png) no-repeat left; padding-left: 120px;" > <div style="display: table-cell; vertical-align: middle;"> 
 
 =for html <p>This is an example</p>
 
@@ -595,7 +599,7 @@ author avatars.
 
     =for pod_spiffy end code section
 
-=for html   <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-    Spiffy/icons/section-code.png) no-repeat left; padding-left: 120px;" > <div style="display: table-cell; vertical-align: middle;"> 
+=for html   <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/section-code.png) no-repeat left; padding-left: 120px;" > <div style="display: table-cell; vertical-align: middle;"> 
 
 =for html <p>This is an example</p>
 
@@ -614,7 +618,7 @@ with all chunks of code.
 
     =for pod_spiffy end warning section
 
-=for html   <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-    Spiffy/icons/section-warning.png) no-repeat left; padding-left: 120px;" > <div style="display: table-cell; vertical-align: middle;"> 
+=for html   <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/section-warning.png) no-repeat left; padding-left: 120px;" > <div style="display: table-cell; vertical-align: middle;"> 
 
 =for html <p>This is an example</p>
 
@@ -630,7 +634,7 @@ Use this section icon to indicate a warning.
 
     =for pod_spiffy end experimental section
 
-=for html   <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-    Spiffy/icons/section-experimental.png) no-repeat left; padding-left: 120px;" > <div style="display: table-cell; vertical-align: middle;"> 
+=for html   <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/section-experimental.png) no-repeat left; padding-left: 120px;" > <div style="display: table-cell; vertical-align: middle;"> 
 
 =for html <p>This is an example</p>
 
@@ -658,14 +662,14 @@ whitespace separated list of PAUSE author IDs, for example:
 
 =for html <p>Example:</p>
 
-=for html <div style="background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-    Spiffy/icons/hr.png);height: 18px;"></div>
+=for html <div style="background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/hr.png);height: 18px;"></div>
 
 A simple horizontal rule. You can use it, for example, to separate
 groups of methods.
 
 =head1 REPOSITORY
 
-=for html   <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-    Spiffy/icons/section-github.png) no-repeat left; padding-left: 120px;" > <div style="display: table-cell; vertical-align: middle;"> 
+=for html   <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/section-github.png) no-repeat left; padding-left: 120px;" > <div style="display: table-cell; vertical-align: middle;"> 
 
 Fork this module on GitHub:
 L<https://github.com/zoffixznet/Dist-Zilla-Plugin-Pod-Spiffy>
@@ -674,7 +678,7 @@ L<https://github.com/zoffixznet/Dist-Zilla-Plugin-Pod-Spiffy>
 
 =head1 BUGS
 
-=for html   <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-    Spiffy/icons/section-bugs.png) no-repeat left; padding-left: 120px;" > <div style="display: table-cell; vertical-align: middle;"> 
+=for html   <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/section-bugs.png) no-repeat left; padding-left: 120px;" > <div style="display: table-cell; vertical-align: middle;"> 
 
 To report bugs or request features, please use
 L<https://github.com/zoffixznet/Dist-Zilla-Plugin-Pod-Spiffy/issues>
@@ -686,7 +690,7 @@ to C<bug-Dist-Zilla-Plugin-Pod-Spiffy at rt.cpan.org>
 
 =head1 AUTHOR
 
-=for html   <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-    Spiffy/icons/section-author.png) no-repeat left; padding-left: 120px;" > <div style="display: table-cell; vertical-align: middle;"> 
+=for html   <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/section-author.png) no-repeat left; padding-left: 120px;" > <div style="display: table-cell; vertical-align: middle;"> 
 
 =for html   <span style="display: inline-block; text-align: center;"> <a href="http://metacpan.org/author/ZOFFIX"> <img src="http://www.gravatar.com/avatar/328e658ab6b08dfb5c106266a4a5d065?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2F627d83ef9879f31bdabf448e666a32d5" alt="ZOFFIX" style="display: block; margin: 0 3px 5px 0!important; border: 1px solid #666; border-radius: 3px; "> <span style="color: #333; font-weight: bold;">ZOFFIX</span> </a> </span> 
 

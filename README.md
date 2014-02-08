@@ -18,7 +18,11 @@ In your POD:
 
     =head1 REPOSITORY
 
-    =for pod_spiffy github Fork this module on https://github.com/zoffixznet/Dist-Zilla-Plugin-Pod-Spiffy
+    =for pod_spiffy start github section
+
+    Fork this module on https://github.com/zoffixznet/Dist-Zilla-Plugin-Pod-Spiffy
+
+    =for pod_spiffy end github section
 
     ...
 
