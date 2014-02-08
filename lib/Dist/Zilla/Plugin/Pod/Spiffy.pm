@@ -3,7 +3,7 @@ package Dist::Zilla::Plugin::Pod::Spiffy;
 use strict;
 use warnings;
 
-our $VERSION = '1.001002'; # VERSION
+our $VERSION = '1.001003'; # VERSION
 
 use Moose;
 with qw/Dist::Zilla::Role::FileMunger/;
@@ -62,8 +62,8 @@ sub __process_authors {
     my $auth = Acme::CPANAuthors->new;
     for ( map uc, @authors ) {
         my $url = $auth->avatar_url($_) || '';
-        $out .= ' ' . qq{<a href="http://metacpan.org/author/$_" style="float: left; text-align: center;padding-right: 5px;">}
-                . qq{<img src="$url" alt="$_" style="display: block;padding-bottom: 5px;">$_</a>};
+        $out .= ' ' . qq{<a href="http://metacpan.org/author/$_">}
+                . qq{<img src="$url" alt="$_" style="margin-bottom:5px;margin-right:3px !important">$_</a>};
     }
 
     return $out . '<br style="clear: both;">';

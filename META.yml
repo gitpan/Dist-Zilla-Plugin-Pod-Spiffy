@@ -20,7 +20,7 @@ name: Dist-Zilla-Plugin-Pod-Spiffy
 provides:
   Dist::Zilla::Plugin::Pod::Spiffy:
     file: lib/Dist/Zilla/Plugin/Pod/Spiffy.pm
-    version: 1.001002
+    version: 1.001003
 requires:
   Acme::CPANAuthors: 0
   Dist::Zilla::Role::FileMunger: 0
@@ -33,7 +33,7 @@ resources:
   bugtracker: https://github.com/zoffixznet/dist-zilla-plugin-pod-spiffy/issues
   homepage: http://metacpan.org/release/Dist-Zilla-Plugin-Pod-Spiffy
   repository: git://github.com/zoffixznet/dist-zilla-plugin-pod-spiffy.git
-version: 1.001002
+version: 1.001003
 x_Dist_Zilla:
   perl:
     version: 5.014002
@@ -42,23 +42,6 @@ x_Dist_Zilla:
       class: Dist::Zilla::Plugin::OurPkgVersion
       name: '@Author::ZOFFIX/OurPkgVersion'
       version: 0.005001
-    -
-      class: Dist::Zilla::Plugin::PromptIfStale
-      config:
-        Dist::Zilla::Plugin::PromptIfStale:
-          check_all_plugins: 1
-          check_all_prereqs: 1
-          modules: []
-          phase: release
-          skip:
-            - strict
-            - warnings
-            - base
-            - ExtUtils::MakeMaker
-            - IPC::Open3
-            - File::Copy
-      name: '@Author::ZOFFIX/PromptIfStale'
-      version: 0.016
     -
       class: Dist::Zilla::Plugin::GatherDir
       name: '@Author::ZOFFIX/GatherDir'
@@ -282,7 +265,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::Pod::Spiffy
       name: Pod::Spiffy
-      version: ~
+      version: 1.001002
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':InstallModules'
