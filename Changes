@@ -1,5 +1,8 @@
 Revision history for Dist-Zilla-Plugin-Pod-Spiffy
 
+1.001003 2014-02-10
+    - Added a whole bunch of section icons
+
 1.001002 2014-02-09
     - Modified AUTHOR section CSS; in hopes of making it purtier
 

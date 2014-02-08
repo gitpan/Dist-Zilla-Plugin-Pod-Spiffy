@@ -254,34 +254,115 @@ Use this icon to indicate your sub/method returns a subref.
 
 Use this icon to indicate your sub/method returns a object.
 
-## OTHER FEATURES
+## SECTION ICONS
+
+To use a section icon, you need to indicate both the start of the section
+and the end of it, e.g.:
+
+    =for pod_spiffy start github section
+
+    =head3 GITHUB REPO
+
+    Fork this module on github https://github.com/zoffixznet/Dist-Zilla-Plugin-Pod-Spiffy
+
+    =for pod_spiffy end github section
+
+Available icons are:
 
 ### Github Repo
 
-__EXPERIMENTAL!__ This feature is still experimental and the API
-will likely change. Currently, it adds a github octocat icon to the
-left of the github repo text; currently suggested usage is as follows,
-although, this is very likely to change in the future. Use
-`github` code to display this; followed by the HTML code you want to
-be displayed to the right of the octocat icon.
+    =for pod_spiffy start github section
 
-    =for pod_spiffy github Fork this module on GitHub:
-    <a href="https://github.com/zoffixznet/Dist-Zilla-Plugin-Pod-Spiffy">https://github.com/zoffixznet/Dist-Zilla-Plugin-Pod-Spiffy</a>
-
-    =for :text Fork this module on GitHub:
+    Fork this module on GitHub:
     L<https://github.com/zoffixznet/Dist-Zilla-Plugin-Pod-Spiffy>
+
+    =for pod_spiffy end github section
+
+### Authors
+
+    =for pod_spiffy start author section
+
+    Joe Shmoe wrote this module
+
+    =for pod_spiffy end author section
+
+__See also:__ ["CPAN Authors"](#cpan-authors) section below, for a way to include
+author avatars.
+
+### Contributors
+
+    =for pod_spiffy start contributors section
+
+        Joe More also contributed to this module
+
+    =for pod_spiffy end contributors section
+
+__See also:__ ["CPAN Authors"](#cpan-authors) section below, for a way to include
+author avatars.
+
+### Bugs
+
+    =for pod_spiffy start bugs section
+
+    Report bugs for this module on
+    L<https://github.com/zoffixznet/Dist-Zilla-Plugin-Pod-Spiffy/issues>
+
+    =for pod_spiffy end bugs section
+
+### Code
+
+    =for pod_spiffy start code section
+
+        print "Yey\n" for 1..42;
+
+    =for pod_spiffy end code section
+
+I'm unsure of the use for this icon. Originally it was planned to be
+used with the SYNOPSIS code. The icon will likely be changed in appearance
+and the `code` section might become more versatile, to be used
+with all chunks of code.
+
+### Warning
+
+    =for pod_spiffy start warning section
+
+    Warning! If you try this something might explode!
+
+    =for pod_spiffy end warning section
+
+Use this section icon to indicate a warning.
+
+### Experimental
+
+    =for pod_spiffy start experimental section
+
+    This method is still experimental!
+
+    =for pod_spiffy end experimental section
+
+Use this section to hint about the features described being experimental.
+
+## OTHER FEATURES
 
 ### CPAN Authors
 
-__EXPERIMENTAL!__ This feature is still experimental and the appearance
-of the output will likely change.
-Currently, this feature adds an avatar of the author, and their PAUSE
+    =for pod_spiffy author ZOFFIX ETHER MSTROUT
+
+Adds an avatar of the author, and their PAUSE
 ID. To use this feature use `authors` code, followed by a
 whitespace separated list of PAUSE author IDs, for example:
 
-    =for pod_spiffy author ZOFFIX ETHER
+### Horizontal Rule
+
+    =for pod_spiffy hr
+
+A simple horizontal rule. You can use it, for example, to separate
+groups of methods.
 
 # REPOSITORY
+
+Fork this module on GitHub:
+[https://github.com/zoffixznet/Dist-Zilla-Plugin-Pod-Spiffy](https://github.com/zoffixznet/Dist-Zilla-Plugin-Pod-Spiffy)
 
 # BUGS
 
@@ -292,8 +373,6 @@ If you can't access GitHub, you can email your request
 to `bug-Dist-Zilla-Plugin-Pod-Spiffy at rt.cpan.org`
 
 # AUTHOR
-
-(Ether is an unvolunteer test subject for this experiment :) )
 
 # LICENSE
 
