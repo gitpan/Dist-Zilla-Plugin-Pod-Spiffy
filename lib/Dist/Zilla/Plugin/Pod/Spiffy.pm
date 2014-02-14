@@ -3,7 +3,7 @@ package Dist::Zilla::Plugin::Pod::Spiffy;
 use strict;
 use warnings;
 
-our $VERSION = '1.001006'; # VERSION
+our $VERSION = '1.001007'; # VERSION
 
 use Moose;
 with qw/Dist::Zilla::Role::FileMunger/;
@@ -85,6 +85,7 @@ sub __process_authors {
     }
 
     $out =~ s/\s*\n\s*/ /g;
+    $out =~ s/\s+$//g;
     return $out;
 }
 
@@ -105,13 +106,10 @@ sub __section_bits {
     for my $pic ( @section_pics ) {
         ( my $name = $pic ) =~ s/section-|\.png//g;
         $name =~ tr/-/_/;
-        $bits{"start_$name"} = qq{
-            <div style="display: table; height: 91px;
+        $bits{"start_$name"} = qq{<div style="display: table; height: 91px;
                 background: url($theme/$pic) no-repeat left;
                 padding-left: 120px;"
-            >
-                <div style="display: table-cell; vertical-align: middle;">
-        };
+            ><div style="display: table-cell; vertical-align: middle;">};
         $bits{"end_$name"} = '</div></div>';
     }
 
@@ -536,7 +534,7 @@ Available icons are:
 
     =for pod_spiffy end github section
 
-=for html   <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/section-github.png) no-repeat left; padding-left: 120px;" > <div style="display: table-cell; vertical-align: middle;"> 
+=for html  <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/section-github.png) no-repeat left; padding-left: 120px;" ><div style="display: table-cell; vertical-align: middle;">
 
 =for html <p>This is an example</p>
 
@@ -550,7 +548,7 @@ Available icons are:
 
     =for pod_spiffy end author section
 
-=for html   <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/section-author.png) no-repeat left; padding-left: 120px;" > <div style="display: table-cell; vertical-align: middle;"> 
+=for html  <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/section-author.png) no-repeat left; padding-left: 120px;" ><div style="display: table-cell; vertical-align: middle;">
 
 =for html <p>This is an example</p>
 
@@ -567,7 +565,7 @@ author avatars.
 
     =for pod_spiffy end contributors section
 
-=for html   <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/section-contributors.png) no-repeat left; padding-left: 120px;" > <div style="display: table-cell; vertical-align: middle;"> 
+=for html  <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/section-contributors.png) no-repeat left; padding-left: 120px;" ><div style="display: table-cell; vertical-align: middle;">
 
 =for html <p>This is an example</p>
 
@@ -585,7 +583,7 @@ author avatars.
 
     =for pod_spiffy end bugs section
 
-=for html   <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/section-bugs.png) no-repeat left; padding-left: 120px;" > <div style="display: table-cell; vertical-align: middle;"> 
+=for html  <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/section-bugs.png) no-repeat left; padding-left: 120px;" ><div style="display: table-cell; vertical-align: middle;">
 
 =for html <p>This is an example</p>
 
@@ -599,7 +597,7 @@ author avatars.
 
     =for pod_spiffy end code section
 
-=for html   <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/section-code.png) no-repeat left; padding-left: 120px;" > <div style="display: table-cell; vertical-align: middle;"> 
+=for html  <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/section-code.png) no-repeat left; padding-left: 120px;" ><div style="display: table-cell; vertical-align: middle;">
 
 =for html <p>This is an example</p>
 
@@ -618,7 +616,7 @@ with all chunks of code.
 
     =for pod_spiffy end warning section
 
-=for html   <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/section-warning.png) no-repeat left; padding-left: 120px;" > <div style="display: table-cell; vertical-align: middle;"> 
+=for html  <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/section-warning.png) no-repeat left; padding-left: 120px;" ><div style="display: table-cell; vertical-align: middle;">
 
 =for html <p>This is an example</p>
 
@@ -634,7 +632,7 @@ Use this section icon to indicate a warning.
 
     =for pod_spiffy end experimental section
 
-=for html   <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/section-experimental.png) no-repeat left; padding-left: 120px;" > <div style="display: table-cell; vertical-align: middle;"> 
+=for html  <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/section-experimental.png) no-repeat left; padding-left: 120px;" ><div style="display: table-cell; vertical-align: middle;">
 
 =for html <p>This is an example</p>
 
@@ -654,7 +652,7 @@ whitespace separated list of PAUSE author IDs, for example:
 
 =for html <p>Example:</p>
 
-=for html   <span style="display: inline-block; text-align: center;"> <a href="http://metacpan.org/author/ZOFFIX"> <img src="http://www.gravatar.com/avatar/328e658ab6b08dfb5c106266a4a5d065?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2F627d83ef9879f31bdabf448e666a32d5" alt="ZOFFIX" style="display: block; margin: 0 3px 5px 0!important; border: 1px solid #666; border-radius: 3px; "> <span style="color: #333; font-weight: bold;">ZOFFIX</span> </a> </span> <span style="display: inline-block; text-align: center;"> <a href="http://metacpan.org/author/ETHER"> <img src="http://www.gravatar.com/avatar/bdc5cd06679e732e262f6c1b450a0237?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fbdc5cd06679e732e262f6c1b450a0237" alt="ETHER" style="display: block; margin: 0 3px 5px 0!important; border: 1px solid #666; border-radius: 3px; "> <span style="color: #333; font-weight: bold;">ETHER</span> </a> </span> <span style="display: inline-block; text-align: center;"> <a href="http://metacpan.org/author/MSTROUT"> <img src="http://www.gravatar.com/avatar/524737fe496a440995d96c27e67387ed?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2F4e8e2db385219e064e6dea8fbd386434" alt="MSTROUT" style="display: block; margin: 0 3px 5px 0!important; border: 1px solid #666; border-radius: 3px; "> <span style="color: #333; font-weight: bold;">MSTROUT</span> </a> </span> 
+=for html   <span style="display: inline-block; text-align: center;"> <a href="http://metacpan.org/author/ZOFFIX"> <img src="http://www.gravatar.com/avatar/328e658ab6b08dfb5c106266a4a5d065?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2F627d83ef9879f31bdabf448e666a32d5" alt="ZOFFIX" style="display: block; margin: 0 3px 5px 0!important; border: 1px solid #666; border-radius: 3px; "> <span style="color: #333; font-weight: bold;">ZOFFIX</span> </a> </span> <span style="display: inline-block; text-align: center;"> <a href="http://metacpan.org/author/ETHER"> <img src="http://www.gravatar.com/avatar/bdc5cd06679e732e262f6c1b450a0237?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fbdc5cd06679e732e262f6c1b450a0237" alt="ETHER" style="display: block; margin: 0 3px 5px 0!important; border: 1px solid #666; border-radius: 3px; "> <span style="color: #333; font-weight: bold;">ETHER</span> </a> </span> <span style="display: inline-block; text-align: center;"> <a href="http://metacpan.org/author/MSTROUT"> <img src="http://www.gravatar.com/avatar/524737fe496a440995d96c27e67387ed?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2F4e8e2db385219e064e6dea8fbd386434" alt="MSTROUT" style="display: block; margin: 0 3px 5px 0!important; border: 1px solid #666; border-radius: 3px; "> <span style="color: #333; font-weight: bold;">MSTROUT</span> </a> </span>
 
 =head3 Horizontal Rule
 
@@ -669,7 +667,7 @@ groups of methods.
 
 =head1 REPOSITORY
 
-=for html   <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/section-github.png) no-repeat left; padding-left: 120px;" > <div style="display: table-cell; vertical-align: middle;"> 
+=for html  <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/section-github.png) no-repeat left; padding-left: 120px;" ><div style="display: table-cell; vertical-align: middle;">
 
 Fork this module on GitHub:
 L<https://github.com/zoffixznet/Dist-Zilla-Plugin-Pod-Spiffy>
@@ -678,7 +676,7 @@ L<https://github.com/zoffixznet/Dist-Zilla-Plugin-Pod-Spiffy>
 
 =head1 BUGS
 
-=for html   <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/section-bugs.png) no-repeat left; padding-left: 120px;" > <div style="display: table-cell; vertical-align: middle;"> 
+=for html  <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/section-bugs.png) no-repeat left; padding-left: 120px;" ><div style="display: table-cell; vertical-align: middle;">
 
 To report bugs or request features, please use
 L<https://github.com/zoffixznet/Dist-Zilla-Plugin-Pod-Spiffy/issues>
@@ -690,9 +688,9 @@ to C<bug-Dist-Zilla-Plugin-Pod-Spiffy at rt.cpan.org>
 
 =head1 AUTHOR
 
-=for html   <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/section-author.png) no-repeat left; padding-left: 120px;" > <div style="display: table-cell; vertical-align: middle;"> 
+=for html  <div style="display: table; height: 91px; background: url(http://zoffix.com/CPAN/Dist-Zilla-Plugin-Pod-Spiffy/icons/section-author.png) no-repeat left; padding-left: 120px;" ><div style="display: table-cell; vertical-align: middle;">
 
-=for html   <span style="display: inline-block; text-align: center;"> <a href="http://metacpan.org/author/ZOFFIX"> <img src="http://www.gravatar.com/avatar/328e658ab6b08dfb5c106266a4a5d065?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2F627d83ef9879f31bdabf448e666a32d5" alt="ZOFFIX" style="display: block; margin: 0 3px 5px 0!important; border: 1px solid #666; border-radius: 3px; "> <span style="color: #333; font-weight: bold;">ZOFFIX</span> </a> </span> 
+=for html   <span style="display: inline-block; text-align: center;"> <a href="http://metacpan.org/author/ZOFFIX"> <img src="http://www.gravatar.com/avatar/328e658ab6b08dfb5c106266a4a5d065?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2F627d83ef9879f31bdabf448e666a32d5" alt="ZOFFIX" style="display: block; margin: 0 3px 5px 0!important; border: 1px solid #666; border-radius: 3px; "> <span style="color: #333; font-weight: bold;">ZOFFIX</span> </a> </span>
 
 =for text Zoffix Znet <zoffix at cpan.org>
 

@@ -1,5 +1,9 @@
 Revision history for Dist-Zilla-Plugin-Pod-Spiffy
 
+1.001007 2014-02-13
+    - fixed up generated HTML to NOT produce white-space at the end
+      of lines
+
 1.001006 2014-02-10
     - PAUSE refuses to budge with previous version... Also there was
       an error in SYNOPSIS

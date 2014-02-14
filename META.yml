@@ -11,7 +11,7 @@ build_requires:
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 5.012, CPAN::Meta::Converter version 2.132830'
+generated_by: 'Dist::Zilla version 5.013, CPAN::Meta::Converter version 2.132830'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -20,7 +20,7 @@ name: Dist-Zilla-Plugin-Pod-Spiffy
 provides:
   Dist::Zilla::Plugin::Pod::Spiffy:
     file: lib/Dist/Zilla/Plugin/Pod/Spiffy.pm
-    version: 1.001006
+    version: 1.001007
 requires:
   Acme::CPANAuthors: 0
   Dist::Zilla::Role::FileMunger: 0
@@ -33,7 +33,7 @@ resources:
   bugtracker: https://github.com/zoffixznet/dist-zilla-plugin-pod-spiffy/issues
   homepage: http://metacpan.org/release/Dist-Zilla-Plugin-Pod-Spiffy
   repository: git://github.com/zoffixznet/dist-zilla-plugin-pod-spiffy.git
-version: 1.001006
+version: 1.001007
 x_Dist_Zilla:
   perl:
     version: 5.014002
@@ -45,51 +45,51 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::GatherDir
       name: '@Author::ZOFFIX/GatherDir'
-      version: 5.012
+      version: 5.013
     -
       class: Dist::Zilla::Plugin::PruneCruft
       name: '@Author::ZOFFIX/PruneCruft'
-      version: 5.012
+      version: 5.013
     -
       class: Dist::Zilla::Plugin::ManifestSkip
       name: '@Author::ZOFFIX/ManifestSkip'
-      version: 5.012
+      version: 5.013
     -
       class: Dist::Zilla::Plugin::MetaYAML
       name: '@Author::ZOFFIX/MetaYAML'
-      version: 5.012
+      version: 5.013
     -
       class: Dist::Zilla::Plugin::License
       name: '@Author::ZOFFIX/License'
-      version: 5.012
+      version: 5.013
     -
       class: Dist::Zilla::Plugin::Readme
       name: '@Author::ZOFFIX/Readme'
-      version: 5.012
+      version: 5.013
     -
       class: Dist::Zilla::Plugin::ExecDir
       name: '@Author::ZOFFIX/ExecDir'
-      version: 5.012
+      version: 5.013
     -
       class: Dist::Zilla::Plugin::ShareDir
       name: '@Author::ZOFFIX/ShareDir'
-      version: 5.012
+      version: 5.013
     -
       class: Dist::Zilla::Plugin::MakeMaker
       name: '@Author::ZOFFIX/MakeMaker'
-      version: 5.012
+      version: 5.013
     -
       class: Dist::Zilla::Plugin::Manifest
       name: '@Author::ZOFFIX/Manifest'
-      version: 5.012
+      version: 5.013
     -
       class: Dist::Zilla::Plugin::AutoPrereqs
       name: '@Author::ZOFFIX/AutoPrereqs'
-      version: 5.012
+      version: 5.013
     -
       class: Dist::Zilla::Plugin::MetaConfig
       name: '@Author::ZOFFIX/MetaConfig'
-      version: 5.012
+      version: 5.013
     -
       class: Dist::Zilla::Plugin::Prereqs::AuthorDeps
       name: '@Author::ZOFFIX/Prereqs::AuthorDeps'
@@ -106,7 +106,7 @@ x_Dist_Zilla:
             -
               class: Dist::Zilla::Plugin::FinderCode
               name: '@Author::ZOFFIX/MetaProvides::Package/AUTOVIV/:InstallModulesPM'
-              version: 5.012
+              version: 5.013
         Dist::Zilla::Role::MetaProvider::Provider:
           inherit_missing: 1
           inherit_version: 1
@@ -155,7 +155,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::MetaTests
       name: '@Author::ZOFFIX/MetaTests'
-      version: 5.012
+      version: 5.013
     -
       class: Dist::Zilla::Plugin::Test::CPAN::Meta::JSON
       name: '@Author::ZOFFIX/Test::CPAN::Meta::JSON'
@@ -177,11 +177,11 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::PodCoverageTests
       name: '@Author::ZOFFIX/PodCoverageTests'
-      version: 5.012
+      version: 5.013
     -
       class: Dist::Zilla::Plugin::PodSyntaxTests
       name: '@Author::ZOFFIX/PodSyntaxTests'
-      version: 5.012
+      version: 5.013
     -
       class: Dist::Zilla::Plugin::Test::Portability
       name: '@Author::ZOFFIX/Test::Portability'
@@ -233,7 +233,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::TestRelease
       name: '@Author::ZOFFIX/TestRelease'
-      version: 5.012
+      version: 5.013
     -
       class: Dist::Zilla::Plugin::InstallRelease
       name: '@Author::ZOFFIX/InstallRelease'
@@ -241,7 +241,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::ConfirmRelease
       name: '@Author::ZOFFIX/ConfirmRelease'
-      version: 5.012
+      version: 5.013
     -
       class: Dist::Zilla::Plugin::Git::Check
       name: '@Author::ZOFFIX/Git::Check'
@@ -261,49 +261,49 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::UploadToCPAN
       name: '@Author::ZOFFIX/UploadToCPAN'
-      version: 5.012
+      version: 5.013
     -
       class: Dist::Zilla::Plugin::Pod::Spiffy
       name: Pod::Spiffy
-      version: 1.001005
+      version: 1.001007
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':InstallModules'
-      version: 5.012
+      version: 5.013
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':IncModules'
-      version: 5.012
+      version: 5.013
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':TestFiles'
-      version: 5.012
+      version: 5.013
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':ExecFiles'
-      version: 5.012
+      version: 5.013
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':ShareFiles'
-      version: 5.012
+      version: 5.013
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':MainModule'
-      version: 5.012
+      version: 5.013
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':AllFiles'
-      version: 5.012
+      version: 5.013
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':NoFiles'
-      version: 5.012
+      version: 5.013
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: '@Author::ZOFFIX/MetaProvides::Package/AUTOVIV/:InstallModulesPM'
-      version: 5.012
+      version: 5.013
   zilla:
     class: Dist::Zilla::Dist::Builder
     config:
       is_trial: 0
-    version: 5.012
+    version: 5.013
